@@ -1,10 +1,6 @@
-const popSelection = document.getElementById("userGenre_pop");
-const rapSelection = document.getElementById("userGenre_rap");
-const slowTempoSelected = document.getElementById("tempo_slow");
-const fastTempoSelected = document.getElementById("tempo_fast");
 const playlistArea = document.getElementById("music");
 
-const API_KEY = "";
+const API_KEY = "BQCI61HWq29fWn-ldXnKxqqqDVwXEXo1y3M2_97Rmd5z9Aoy_A2ju3dH0b7EbEMcdZ26rWPFaPYvrjn79UYb0AiaEO6nVfjss9xcZfDPjKvZqoa4qv5ZKr_F_eD3P5ewM4z_HBfAU4KLFodXDu0k2WrdA3lmnFWfS72ww5tTl7rCUt7Pcwo4zFadkojZzS6ziRPHgglbsbXCJxCGZpHF40BYP-g3PmDTe-ESZu0VQElSeA";
 
 var myHeaders = new Headers();
 myHeaders.append("Authorization", "Bearer " + API_KEY);
@@ -16,7 +12,7 @@ var requestOptions = {
 };
 
 // define form elements as variables
-const submitBtn = document.getElementById("submitChoices");
+const submitBtn = document.getElementById("submitBtn");
 const genreSelection = document.querySelectorAll('input[name="genre"]');
 const tempoSelection = document.querySelectorAll('input[name="tempo"]');
 
@@ -42,7 +38,7 @@ submitBtn.addEventListener("click", () => {
 
 // fetch the user options when they click the submit button
 function getRecommendations(selectedGenre, selectedTempo) {
-    fetch(`https://api.spotify.com/v1/recommendations?seed_genres=${selectedGenre}&target_danceability=${selectedTempo}`, requestOptions)
+    fetch(`https://api.spotify.com/v1/recommendations?seed_genres=${selectedGenre}&target_danceability=${selectedTempo}&limit=5`, requestOptions)
         .then(response => response.text())
         .then(result => displayResults(result))
         .catch(error => console.log('error', error));
