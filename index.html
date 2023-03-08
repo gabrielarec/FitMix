@@ -11,34 +11,29 @@
 
 </head>
 <body>
-<!-- page 1 -->
+<!-- page 1 Home screen-->
     <div class="ui inverted segment">
-        <p></p>
-        <div class="ui inverted divider"></div>
-        <p></p>
-        <h4 class="ui horizontal inverted divider">
+       <div class="ui inverted divider"></div>
+       <h4 class="ui horizontal inverted divider">
           FitMix
         </h4>
       </div>
        <div class="ui three column grid">
-        <div class="column">
           <div class="ui segment">
-            <img>Spaceholder for workout 1
+            <img class="ui top aligned medium image" src="./Develop/Images/img.jpeg" >Spaceholder for workout 1
           </div>
+            <div class="ui segment">
+                <img class="ui top aligned medium circular image" src="./Develop/Images/img7.jpeg">Spaceholder for workout 2
+            </div>
+          <div class="ui segment">
+            <img class="ui top aligned medium circular image"src="./Develop/Images/img9.jpeg"> Spaceholder for workout 3
         </div>
-        <div class="column">
-          <div class="ui segment">
-            <img>Spaceholder for workout 2
-          </div>
-        </div>
-        <div class="column">
-          <div class="ui segment">
-        Spaceholder for workout 3
-          </div>
+        
+        <div>
+         <button class="green ui button">Create New Workout</button>
         </div> 
-      <button class="green ui button">Create New Workout</button>
     </div>
-      <!-- page 2 -->
+      <!-- page 2 Quiz -->
       
       <h1>Music Quiz</h1>
       <h4>Help us create a custom workout for you by selecting your choice in music below! </h4>
@@ -61,17 +56,19 @@
         <button class="green ui button">Next</button>
         </div>
 
-<!-- page 3 -->
+<!-- page 3 Exercices & music results-->
 <h4>Here are your exercises and recommended playlist!</h4>
-<div>
-    <ul>
-        <li><i class="heartbeat icon"></i><button class="ui black button">Exercise 1</button>
-        <li><i class="heartbeat icon"></i><button class="ui black button">Exercise 2</button></li>
-        <li><i class="heartbeat icon"></i><button class="ui black button">Exercise 3</button></li>
-        <li><i class="heartbeat icon"></i><button class="ui black button">Exercise 4</button></li>
-        <li><i class="heartbeat icon"></i><button class="ui black button">Exercise 5</button></li>
-        <li><i class="heartbeat icon"></i><button class="ui black button">Exercise 6</button></li>
-    </ul>
+<div class="ui grid container">
+    <div class=" three wide column mobile row"> 
+        <li><img class="ui top aligned small image" src="./Develop/Images/cardio.jpeg"><button class="ui black button">Exercise 1</button></li>
+        <li><img class="ui top aligned small image" src="./Develop/Images/cardio.jpeg"><button class="ui black button">Exercise 2</button></li>
+        <li><img class="ui top aligned small image" src="./Develop/Images/cardio.jpeg"><button class="ui black button">Exercise 3</button></li>
+    </div>
+    <div class=" three wide column mobile row"> 
+        <li><img class="ui top aligned small image" src="./Develop/Images/cardio.jpeg"><button class="ui black button">Exercise 4</button></li>
+        <li><img class="ui top aligned small image" src="./Develop/Images/cardio.jpeg"><button class="ui black button">Exercise 5</button></li>
+        <li><img class="ui top aligned small image" src="./Develop/Images/cardio.jpeg"><button class="ui black button">Exercise 6</button></li>
+    </div>
 </div>
 
 <button class="ui button">
@@ -87,9 +84,55 @@
     Playlist 3
   </button>
   <div>
-  <button class="green ui button">Save this workout?</button>
-</div>
+    <div class="ui buttons">
+        <button class="ui positive button">Save workout</button>
+        <div class="or"></div>
+        <button class="ui negative button">Don't save</button>
+      </div>
 
+<!-- page 4 naming playlist-->
+<h4>Please name your playlist bellow</h4>
+<form class="ui fluid form">
+    <div class="field">
+      <input type="text" placeholder="playlist name">
+      <div class="ui pointing black basic label"> 
+        Write your playlist name here
+    </div>
+</div>
+    <div> 
+    <button class="green ui button">Complete</button>
+    </div>
+
+<!-- page 5 active playlist and workouts-->
+<h4>Active playlist and workouts </h4>
+<div class="ui grid container"> 
+    <div class=" three wide column mobile row">
+        <li><button class="ui teal button">Exercise 1</button></li>
+        <li><button class="ui teal button">Exercise 2</button></li>
+        <li><button class="ui teal button">Exercise 3</button></li>
+    </div>
+    <div class=" three wide column mobile row">
+        <li><button class="ui teal button">Exercise 4</button></li>
+        <li><button class="ui teal button">Exercise 5</button></li>
+        <li><button class="ui teal button">Exercise 6</button></li>
+    </div>
+    
+</div>    
+<button class="ui button">
+    <i class="play icon"></i>
+    Playlist 1
+  </button>
+  <button class="ui button">
+    <i class="play icon"></i>
+    Playlist 2
+  </button>
+  <button class="ui button">
+    <i class="play icon"></i>
+    Playlist 3
+  </button>
+<div> 
+  <button class="green ui button">Return to home</button>
+</div>
 
     <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.5.0/dist/semantic.min.js"></script>
 </body>
