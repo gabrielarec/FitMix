@@ -1,16 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./Develop/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" />  
-    <title>FitMix</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.5.0/dist/semantic.min.css">
+  <script src="./Develop/spotifySearch.js" defer></script>
+  <title>FitMix</title>
 
 
 </head>
+
 <body>
+
+  <div class="ui inverted segment">
+    <p></p>
+    <div class="ui inverted divider"></div>
+    <p></p>
+    <h4 class="ui horizontal inverted divider">
+      FitMix
+    </h4>
+  </div>
+  <div class="ui three column grid">
+    <div class="column">
+      <div class="ui segment">
+        <img>Spaceholder for workout 1
+      </div>
+    </div>
+    <div class="column">
+      <div class="ui segment">
+        <img>Spaceholder for workout 2
+      </div>
+    </div>
+    <div class="column">
+      <div class="ui segment">
+        <img>Spaceholder for workout 3
+      </div>
+    </div>
+  </div>
+  <section>
+    <p>Choose a Genre:</p>
+    <form id="genreSelection">
+      <input type="radio" id="userGenre_pop" name="genre" value="pop">
+      <label for="userGenre_pop">Pop</label><br>
+      <input type="radio" id="userGenre_rap" name="genre" value="r-n-b">
+      <label for="userGenre_rap">RnB</label><br>
+      <input type="radio" id="userGenre_latin" name="genre" value="latin">
+      <label for="userGenre_latin">Latin</label><br>
+      <input type="radio" id="userGenre_club" name="genre" value="club">
+      <label for="userGenre_latin">Club</label><br>
+    </form>
+    <form>
+      Choose a tempo:<br />
+      <input type="radio" id="tempo_slow" name="tempo" value="0.5">
+      <label for="tempo_slow">Slow</label><br>
 <!-- page 1 Home screen-->
     <div class="ui inverted segment">
        <div class="ui inverted divider"></div>
@@ -55,6 +99,15 @@
         <div> 
         <button class="green ui button">Next</button>
         </div>
+
+      <input type="radio" id="tempo_fast" name="tempo" value="1">
+      <label for="tempo_fast">fast</label><br>
+
+    </form>
+    <button id="submitBtn" class="positive ui button">Create New Workout</button>
+  </section>
+  <section id="music">
+  </section>
 
 <!-- page 3 Exercices & music results-->
 <h4>Here are your exercises and recommended playlist!</h4>
@@ -136,4 +189,5 @@
 
     <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.5.0/dist/semantic.min.js"></script>
 </body>
+
 </html>
