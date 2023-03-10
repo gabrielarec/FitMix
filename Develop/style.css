@@ -80,7 +80,6 @@
  /**
   * Add the correct display in IE 9-.
   */
-  
  
  article,
  aside,
@@ -1669,7 +1668,6 @@
  }
  
  /* Left Labeled */
- 
  
  .ui.labeled.icon.buttons > .button > .icon,
  .ui.labeled.icon.button > .icon {
@@ -13546,7 +13544,6 @@
    display: block;
    max-width: 100%;
    height: auto;
-   
  }
  
  /*******************************
