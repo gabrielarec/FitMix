@@ -5,8 +5,6 @@ var homeWorkouts = document.getElementById("homepage-workouts")
 var createWorkout = document.getElementById("genreSelection")
 createWorkout.addEventListener('click', function(){
     clearScreen()
-
-
 })
 
 //write function to display the various results of each saved set of values
@@ -19,12 +17,11 @@ function saveWorkoutToLS(){
     const code = document.getElementById("")
 }
 
-
-//write a function to select the respective genre
-
 //music quiz buttons 
 //is creating an ID for each item the best option? 
 var musicButtons = document.getElementById("buttonID")
+
+//add in functions to display the quiz pieces 
 
 //tempo quiz buttons 
 var tempoButtons = document.getElementById("tempoID")
@@ -63,9 +60,14 @@ function savetoLS(workout){
 saveWorkoutButton = document.getElementById("save-workout")
 saveWorkoutButton.addEventListener('click', saveWorkout)
 
+//nick will write function to save playlist to LS
+
+
 //function to save workout
 function saveWorkout(){
     //get all exercises and playlists to create workout object
+
+    //add portion to save the name of the workout 
 
     //call savetoLS and pass workout object
 
@@ -73,4 +75,10 @@ function saveWorkout(){
 
 //function to load from localstorage. Pull the array with objects, and display the one that is relevant to you
 //append new workout to the page
+function displayWorkout() {
 
+    //pull from respective keys in LS for workout and playlist 
+
+}
+
+//function to return to home screen as workout is being displayed
