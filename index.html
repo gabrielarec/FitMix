@@ -14,6 +14,8 @@
     integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
   <!-- Import spotify search script -->
   <script src="./Develop/spotifySearch.js" defer></script>
+   <!-- Import workout script -->
+   <script src="./Develop/wger.js" defer></script>
   <title>FitMix</title>
 
 
@@ -60,6 +62,27 @@
       <input type="radio" id="userGenre_club" name="genre" value="club">
       <label for="userGenre_latin">Club</label><br>
     </form>
+    <p>Choose a Workout Category:</p>
+ <!-- Workout Category Selection Options -->
+    <form id="categorySelection">
+      <input type="radio" id="userCategory_abs" name="category" value="10">
+      <label for="userCategory_abs">Abs</label><br>
+      <input type="radio" id="userCategory_arms" name="category" value="8">
+      <label for="userCategory_arms">Arms</label><br>
+      <input type="radio" id="userCategory_back" name="category" value="12">
+      <label for="userCategory_back">Back</label><br>
+      <input type="radio" id="userCategory_calves" name="category" value="14">
+      <label for="userCategory_calves">Calves</label><br>
+      <input type="radio" id="userCategory_cardio" name="category" value="15">
+      <label for="userCategory_cardio">Cardio</label><br>
+      <input type="radio" id="userCategory_chest" name="category" value="11">
+      <label for="userCategory_abs">Chest</label><br>
+      <input type="radio" id="userCategory_legs" name="category" value="9">
+      <label for="userCategory_legs">Legs</label><br>
+      <input type="radio" id="userCategory_shoulders" name="category" value="13">
+      <label for="userCategory_shoulders">Shoulders</label><br>
+    </form>
+    <button id="submitWorkoutBtn" class="positive ui button">Select Category</button>
     <!-- Music Tempo Selection Options -->
     <form>
       Choose a tempo:<br />
@@ -124,6 +147,32 @@
         <button id="submitBtn" class="positive ui button">Create New Workout</button>
   </section>
   <section id="music">
+  </section>
+  <section>
+    <p>
+        <span id="workoutName0"></span>
+        <div id="workoutDesc0"></div>
+    </p>
+    <p>
+      <span id="workoutName1"></span>
+      <div id="workoutDesc1"></div> 
+    </p>
+    <p>
+      <span id="workoutName2"></span>
+      <div id="workoutDesc2"></div>
+   </p>
+   <p>
+    <span id="workoutName3"></span>
+    <div id="workoutDesc3"></div> 
+   </p>
+   <p>
+    <span id="workoutName4"></span>
+    <div id="workoutDesc4"></div>
+  </p>
+  <p>
+    <span id="workoutName5"></span>
+    <div id="workoutDesc5"></div>
+  </p>
   </section>
   </div>
 
