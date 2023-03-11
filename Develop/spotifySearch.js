@@ -1,4 +1,4 @@
-const playlistArea = document.getElementById("music");
+const playlistArea = document.getElementById("musicDisplay");
 
 const refresh_token = "AQCfDB3bTof-_EkswipRocqlcHa_560oI24tOC9brWemEHwrIXhih8Ep5Y1edQ8I8FYKWd_D3GjYGcJ__evxItB_C8xyb53yN70jMtFQ-9jGZqMfGfHeMXGfjaoSC6IxnbQ";
 
