@@ -5,8 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.5.0/dist/semantic.min.css">
-  <script src="./Develop/spotifySearch.js" defer></script>
+  <script src="./wger.js" defer></script>
   <title>FitMix</title>
 
 
@@ -51,23 +50,45 @@
       <input type="radio" id="userGenre_club" name="genre" value="club">
       <label for="userGenre_latin">Club</label><br>
     </form>
+    <p>Workout Category:</p>
+    <form id="categorySelection">
+      <input type="radio" id="userCategory_abs" name="category" value="10">
+      <label for="userCategory_abs">Abs</label><br>
+      <input type="radio" id="userCategory_arms" name="category" value="8">
+      <label for="userCategory_arms">Arms</label><br>
+      <input type="radio" id="userCategory_back" name="category" value="12">
+      <label for="userCategory_back">Back</label><br>
+      <input type="radio" id="userCategory_calves" name="category" value="14">
+      <label for="userCategory_calves">Calves</label><br>
+      <input type="radio" id="userCategory_cardio" name="category" value="15">
+      <label for="userCategory_cardio">Cardio</label><br>
+      <input type="radio" id="userCategory_chest" name="category" value="11">
+      <label for="userCategory_abs">Chest</label><br>
+      <input type="radio" id="userCategory_legs" name="category" value="9">
+      <label for="userCategory_legs">Legs</label><br>
+      <input type="radio" id="userCategory_shoulders" name="category" value="13">
+      <label for="userCategory_shoulders">Shoulders</label><br>
+    </form>
     <form>
       Choose a tempo:<br />
       <input type="radio" id="tempo_slow" name="tempo" value="0.5">
       <label for="tempo_slow">Slow</label><br>
 
       <input type="radio" id="tempo_fast" name="tempo" value="1">
-      <label for="tempo_fast">fast</label><br>
+      <label for="tempo_fast">fast</label><br>`
 
     </form>
     <button id="submitBtn" class="positive ui button">Create New Workout</button>
   </section>
   <section id="music">
   </section>
+  <section>
+    <p>
+        <span id="workout">Your Workout</span> 
+    </p>
 
+</section>
 
-
-  <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.5.0/dist/semantic.min.js"></script>
 </body>
 
 </html>
