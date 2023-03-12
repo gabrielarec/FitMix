@@ -50,24 +50,24 @@ const genreSelection = document.querySelectorAll('input[name="genre"]');
 const tempoSelection = document.querySelectorAll('input[name="tempo"]');
 
 // when user clicks submit button, get the values of their options
-submitBtn.addEventListener("click", (event) => {
-    event.preventDefault();
-    let selectedGenre;
-    console.log("button clicked")
-    for (const radioButton of genreSelection) {
-        if (radioButton.checked) {
-            selectedGenre = radioButton.value;
-            console.log(selectedGenre);
-        }
-    }
-    for (const radioButton of tempoSelection) {
-        if (radioButton.checked) {
-            selectedTempo = radioButton.value;
-            console.log(selectedTempo);
-        }
-    }
-    getRecommendations(selectedGenre, selectedTempo);
-})
+// submitBtn.addEventListener("click", (event) => {
+//     event.preventDefault();
+//     let selectedGenre;
+//     console.log("button clicked")
+//     for (const radioButton of genreSelection) {
+//         if (radioButton.checked) {
+//             selectedGenre = radioButton.value;
+//             console.log(selectedGenre);
+//         }
+//     }
+//     for (const radioButton of tempoSelection) {
+//         if (radioButton.checked) {
+//             selectedTempo = radioButton.value;
+//             console.log(selectedTempo);
+//         }
+//     }
+//     getRecommendations(selectedGenre, selectedTempo);
+// })
 
 
 // fetch the user options when they click the submit button

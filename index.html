@@ -33,7 +33,7 @@
       FitMix
     </h4>
   </div>
-  <div class="ui three column grid" id="homepage-workouts">
+  <div class="ui three column grid">
     <div class="column">
       <div class="ui segment">
         <img>Spaceholder for workout 1
@@ -50,27 +50,14 @@
       </div>
     </div>
   </div> -->
+
   <!-- page 1 Home screen-->
-  <div class="ui inverted segment">
+  <section class="ui inverted segment" id="home-page">
     <div class="ui inverted divider"> </div>
     <h4 class="ui horizontal inverted divider">
       FitMix
     </h4>
 
-  <section>
-    <p>Choose a Genre:</p>
-    <form>
-    <!-- Music Genre Selection Options -->
-    <form id="genreSelection">
-      <input type="radio" id="userGenre_pop" name="genre" value="pop">
-      <label for="userGenre_pop">Pop</label><br>
-      <input type="radio" id="userGenre_rap" name="genre" value="r-n-b">
-      <label for="userGenre_rap">RnB</label><br>
-      <input type="radio" id="userGenre_latin" name="genre" value="latin">
-      <label for="userGenre_latin">Latin</label><br>
-      <input type="radio" id="userGenre_club" name="genre" value="club">
-      <label for="userGenre_latin">Club</label><br>
-    </form>
     <div class="ui container">
       <div class="three wide column mobile row">
         <div class="ui segment">
@@ -88,11 +75,11 @@
     </div>
 
     <div>
-      <button id="create-workout" class="green ui button">Create New Workout</button>
+      <button class="green ui button" id="first-button">Create New Workout</button>
     </div>
-  </div>
+  </section>
   <!-- page 2 Quiz -->
-  <section class="ui container" id="music-quiz">
+  <section class="ui container hidden transition" id="music-quiz">
     <h1>Music Quiz</h1>
     <h4>Help us create a custom workout for you by selecting your choice in music below! </h4>
     <section id="musicSelection">
@@ -167,175 +154,16 @@
       <input type="radio" id="userCategory_shoulders" name="category" value="13">
       <label for="userCategory_shoulders">Shoulders</label><br>
     </form>
-    <button id="submitWorkoutBtn" class="positive ui button">Select Category</button>
-    <!-- Music Tempo Selection Options -->
-    <form>
-      Choose a tempo:<br />
-      <input type="radio" id="tempo_slow" name="tempo" value="0.5">
-      <label for="tempo_slow">Slow</label><br>
-<!-- page 1 Home screen-->
-    <div class="ui inverted segment"> 
-        <div class="ui inverted divider"> </div>
-          <h4 class="ui horizontal inverted divider">
-          FitMix
-          </h4>
-    
-          <div class="ui container">
-        <div class="three wide column mobile row"> 
-          <div class="ui segment">            
-              <img class="ui top centered medium image" src="./Develop/Images/img.jpeg"> Spaceholder for workout 1
-          </div>
-          <div class="ui segment">
-                <img class="ui top centered medium circular image" src="./Develop/Images/img7.jpeg"> Spaceholder for workout 2
-          </div>
-            <div class="ui segment">
-             <img class="ui top centered medium circular image"src="./Develop/Images/img9.jpeg"><br> Spaceholder for workout 3
-            </div>    
-        </div>    
-      </div>
-        
-        <div>
-         <button id="create-workout" class="green ui button">Create New Workout</button>
-        </div> 
-    </div>
-      <!-- page 2 Quiz -->
-<div class="ui container" id="music-quiz" >
-          <h1>Music Quiz</h1>
-          <h4>Help us create a custom workout for you by selecting your choice in music below! </h4>   
-              <h3>Genre </h3>
-              <div class="ui list">
-              <button class="ui black button">Pop</button>
-              <button class="ui black button">RnB</button>
-              <button class="ui black button">Latin</button>
-              <button class="ui black button">Club</button>
+    <button id="create-workout" class="positive ui button">Select Category</button>
 
-      <h3>Tempo</h3>  
-        <button class="ui black button">Slow</button>
-        <button class="ui black button">Medium</button>
-        <button class="ui black button">Fast</button>
-
-      <h4>What intensity workout would you like yo do?</h4>   
-        <button class="ui black button">Easy</button>
-        <button class="ui black button">Medium</button>
-        <button class="ui black button">Hard</button>
-        <div> 
-        <button class="green ui button">Next</button>
-        </div>
-      </div>
-      <!-- page 2 Quiz -->
-
-      <section class="hide">
-        <h1>Music Quiz</h1>
-        <h4>Help us create a custom workout for you by selecting your choice in music below! </h4>
-        <h3>Genre </h3>
-        <div class="ui list">
-          <button class="ui black button">Genre 1</button>
-          <button class="ui black button">Genre 2</button>
-          <button class="ui black button">Genre 3</button>
-
-          <h3>Tempo</h3>
-          <button class="ui black button">Slow</button>
-          <button class="ui black button">Medium</button>
-          <button class="ui black button">Fast</button>
-
-          <h4>What intensity workout would you like yo do?</h4>
-          <button class="ui black button">Easy</button>
-          <button class="ui black button">Medium</button>
-          <button class="ui black button">Hard</button>
-          <div>
-            <button class="green ui button">Next</button>
-          </div>
-
-          <input type="radio" id="tempo_fast" name="tempo" value="1">
-          <label for="tempo_fast">fast</label><br>
-        </div>
-      </section>
-
-    </form>
-    <!-- page 1 Home screen-->
-    <div class="ui inverted segment">
-      <div class="ui inverted divider"> </div>
-      <h4 class="ui horizontal inverted divider">
-        FitMix
-      </h4>
-
-      <div class="ui container">
-        <div class="three wide column mobile row">
-          <div class="ui segment">
-            <img class="ui top centered medium image" src="./Develop/Images/img.jpeg"> Spaceholder for workout 1
-          </div>
-          <div class="ui segment">
-            <img class="ui top centered medium circular image" src="./Develop/Images/img7.jpeg"> Spaceholder for
-            workout 2
-          </div>
-          <div class="ui segment">
-            <img class="ui top centered medium circular image" src="./Develop/Images/img9.jpeg"><br> Spaceholder for
-            workout 3
-          </div>
-        </div>
-      </div>
-
-      <div>
-        <button class="green ui button">Create New Workout</button>
-      </div>
-    </div>
-    <!-- page 2 Quiz -->
-    <div class="ui container" id="music-quiz">
-      <h1>Music Quiz</h1>
-      <h4>Help us create a custom workout for you by selecting your choice in music below! </h4>
-      <h3>Genre </h3>
-      <div class="ui list">
-        <button class="ui black button">Pop</button>
-        <button class="ui black button">RnB</button>
-        <button class="ui black button">Latin</button>
-        <button class="ui black button">Club</button>
-
-        <h3>Tempo</h3>
-        <button class="ui black button">Slow</button>
-        <button class="ui black button">Medium</button>
-        <button class="ui black button">Fast</button>
-
-        <h4>What intensity workout would you like yo do?</h4>
-        <button class="ui black button">Easy</button>
-        <button class="ui black button">Medium</button>
-        <button class="ui black button">Hard</button>
-        <div>
-          <button class="green ui button">Next</button>
-        </div>
-
-        <button id="submitBtn" class="positive ui button">Create New Workout</button>
-  </section>
-  <section id="music">
-
-    <button id="submitBtn" class="positive ui button">Create New Workout</button>
   </section>
 
-  <section>
-    <p>
-
-    </p>
-    <p>
-
-    </p>
-    <p>
-
-    </p>
-    <p>
-
-    </p>
-    <p>
-
-    </p>
-    <p>
-
-    </p>
-  </section>
   </div>
 
   <!-- page 3 Exercises & music results-->
 
   <!-- <img class="ui centered large image" src="./Develop/Images/music2.jpeg"> -->
-  <section class="container" id="quizResults">
+  <section class="container hidden transition" id="quizResults">
     <h4>Here are your exercises and recommended playlist!</h4>
     <div class="ui grid centered container" id="workout">
       <!-- First Column of Workouts -->
@@ -397,50 +225,15 @@
         <button class="ui negative button">Don't save</button>
       </div>
     </div>
-  </div>
-  <div class="ui grid centered container">
-    <button class="ui button">
-      <i class="play icon"></i>
-      Playlist 1
-    </button>
-    <button class="ui button">
-      <i class="play icon"></i>
-      Playlist 2
-    </button>
-    <button class="ui button">
-      <i class="play icon"></i>
-      Playlist 3
-    </button>
-  </div>
-  <div class="ui grid centered container">
-    <div class="ui buttons">
-      <button id="save-workout" class="ui positive button">Save workout</button>
-      <div class="or"></div>
-      <button class="ui negative button">Don't save</button>
+
+    <div>
+      <button class="green ui button" id="return-home-button">Return to home</button>
     </div>
 
-    <!-- page 4 naming playlist-->
-    <h4>Please name your playlist bellow</h4>
-    <form class="ui fluid form">
-      <div class="field">
-        <input type="text" placeholder="playlist name">
-        <div class="ui pointing black basic label">
-          Write your playlist name here
-        </div>
-      </div>
-      <div>
-        <button class="green ui button">Complete</button>
-      </div>
-  </div>      
-      <button class="ui positive button">Save workout</button>
-      <div class="or"></div>
-      <button class="ui negative button">Don't save</button>
-    </div>
-  </div>
   </section>
 
   <!-- page 4 naming playlist-->
-  <section class="ui centered container">
+  <section class="ui centered container hidden transition">
     <img class="ui centered large image" src="./Develop/Images/img4.jpeg">
 
     <h4>Please name your playlist bellow:</h4>
@@ -450,14 +243,13 @@
         <div class="ui pointing black basic label"> Write your playlist name here </div>
       </div>
       <div>
-        <button id="return-home-button" class="green ui button">Return to home</button>
         <button class="green ui button">Complete</button>
       </div>
     </form>
   </section>
 
   <!-- page 5 active playlist and workouts-->
-  <img class="ui centered disabled large image" src="./Develop/Images/img3.jpeg">
+  <!-- <img class="ui centered disabled large image" src="./Develop/Images/img3.jpeg">
   <div class="ui container" id="last-page">
     <h4>Active playlist and workouts </h4>
     <div class="ui grid centered container">
@@ -485,14 +277,11 @@
         <i class="play icon"></i>
         Playlist 3
       </button>
-    </div>
-  <div>
-    <button class="green ui button">Return to home</button>
-  </div>
+    </div> -->
 
-      <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.5.0/dist/semantic.min.js"></script>
-         <!-- Import single JS file -->
-   <script src="./Develop/script.js" ></script>
 </body>
+
+<!-- Script.JS file  -->
+<script src="./Develop/script.js"></script>
 
 </html>

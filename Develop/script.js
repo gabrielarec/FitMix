@@ -1,10 +1,10 @@
 //base JavaScript file
-var homeWorkouts = document.getElementById("homepage-workouts")
+var homePage = document.getElementById("home-page")
+var musicQuiz = document.getElementById("music-quiz")
 
 //'create new workout' quiz start button
 var createWorkout = document.getElementById("create-workout")
 createWorkout.addEventListener('click', function(){
-    //clearScreen()
 
     //spotify event listener
     event.preventDefault();
@@ -33,12 +33,10 @@ createWorkout.addEventListener('click', function(){
     getWorkoutRec(selectedCategory).catch(error => {
         console.log('error');
         console.error(error)});;
-})
 
-//write function to display the various results of each saved set of values
-function clearScreen() {
-    homeWorkouts.innerHTML = ""
-}
+    //change the page 
+    changePage("music-quiz", "quizResults")
+})
 
 //function to save the generated playlist and workouts into a single localstorage variable
 function saveWorkoutToLS(){
@@ -48,10 +46,16 @@ function saveWorkoutToLS(){
 //function to clear contents. Use parameters to select which elements to take in and then hide/show
 //call each time you have an old page and new page, pass in the string of ids for each element
 function changePage(elementToHide, elementToShow){
-    document.getElementById(elementToHide).classList.add("hide")
-    document.getElementById(elementToShow).classList.remove("hide")
-    
+    document.getElementById(elementToHide).classList.add("hidden")
+    document.getElementById(elementToHide).classList.add("transition")
+    document.getElementById(elementToShow).classList.remove("hidden")
+    document.getElementById(elementToShow).classList.remove("transition")
 }
+
+var startButton = document.getElementById("first-button")
+startButton.addEventListener('click', function(){
+    changePage("home-page", "music-quiz")
+})
 
 function startWorkout(e){
     e.preventDefault()
@@ -101,20 +105,24 @@ function displayWorkoutFromLS(workoutName) {
     }
 }
 
-//variables set to return to home screen as workout is being displayed
+// //variables set to return to home screen as workout is being displayed
 var returnHomeButton = document.getElementById("return-home-button")
 
-//event listener to home button
-returnHomeButton.addEventListener('click', returnHome)
+// //event listener to home button
+returnHomeButton.addEventListener('click', function(){
+    changePage("quizResults", "home-page")
+    console.log("button is clicked")
+})
+
 
 //function to clear workout screen and display home screen
-function returnHome() {
-    //clear workout screen
-    clearScreen()
+// function returnHome() {
+//     //clear workout screen
+//     changePage("quizResults", "home-screen")
 
-    //display home screen again
-    homeWorkouts.classList.remove("hide")
-}
+//     //display home screen again
+//     homeWorkouts.classList.remove("hidden transition")
+// }
 
 
 
