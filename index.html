@@ -50,8 +50,9 @@
       </div>
     </div>
   </div> -->
+
   <!-- page 1 Home screen-->
-  <div class="ui inverted segment">
+  <section class="ui inverted segment" id="home-page">
     <div class="ui inverted divider"> </div>
     <h4 class="ui horizontal inverted divider">
       FitMix
@@ -74,11 +75,11 @@
     </div>
 
     <div>
-      <button class="green ui button">Create New Workout</button>
+      <button class="green ui button" id="first-button">Create New Workout</button>
     </div>
-  </div>
+  </section>
   <!-- page 2 Quiz -->
-  <section class="ui container" id="music-quiz">
+  <section class="ui container hidden transition" id="music-quiz">
     <h1>Music Quiz</h1>
     <h4>Help us create a custom workout for you by selecting your choice in music below! </h4>
     <section id="musicSelection">
@@ -153,37 +154,16 @@
       <input type="radio" id="userCategory_shoulders" name="category" value="13">
       <label for="userCategory_shoulders">Shoulders</label><br>
     </form>
-    <button id="submitWorkoutBtn" class="positive ui button">Select Category</button>
+    <button id="create-workout" class="positive ui button">Select Category</button>
 
-    <button id="submitBtn" class="positive ui button">Create New Workout</button>
   </section>
 
-  <section>
-    <p>
-
-    </p>
-    <p>
-
-    </p>
-    <p>
-
-    </p>
-    <p>
-
-    </p>
-    <p>
-
-    </p>
-    <p>
-
-    </p>
-  </section>
   </div>
 
   <!-- page 3 Exercises & music results-->
 
   <!-- <img class="ui centered large image" src="./Develop/Images/music2.jpeg"> -->
-  <section class="container" id="quizResults">
+  <section class="container hidden transition" id="quizResults">
     <h4>Here are your exercises and recommended playlist!</h4>
     <div class="ui grid centered container" id="workout">
       <!-- First Column of Workouts -->
@@ -245,10 +225,15 @@
         <button class="ui negative button">Don't save</button>
       </div>
     </div>
+
+    <div>
+      <button class="green ui button" id="return-home-button">Return to home</button>
+    </div>
+
   </section>
 
   <!-- page 4 naming playlist-->
-  <section class="ui centered container">
+  <section class="ui centered container hidden transition">
     <img class="ui centered large image" src="./Develop/Images/img4.jpeg">
 
     <h4>Please name your playlist bellow:</h4>
@@ -293,10 +278,10 @@
         Playlist 3
       </button>
     </div> -->
-  <div>
-    <button class="green ui button">Return to home</button>
-  </div>
 
 </body>
+
+<!-- Script.JS file  -->
+<script src="./Develop/script.js"></script>
 
 </html>

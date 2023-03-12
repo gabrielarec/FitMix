@@ -17,18 +17,18 @@ const workoutDesc5 = document.getElementById("workoutDesc5");
 const submitWorkoutBtn = document.getElementById("submitWorkoutBtn");
 const exerciseList = 'https://wger.de/api/v2/exercise/?language=2&category='
 
-submitWorkoutBtn.addEventListener("click", () => {
-    let selectedCategory = document.querySelector('input[name="category"]:checked').value;
-    console.log("button clicked")
-    console.log(selectedCategory)
+// submitWorkoutBtn.addEventListener("click", () => {
+//     let selectedCategory = document.querySelector('input[name="category"]:checked').value;
+//     console.log("button clicked")
+//     console.log(selectedCategory)
 
     
 
-    getWorkoutRec(selectedCategory).catch(error => {
-        console.log('error');
-        console.error(error)});;
+//     getWorkoutRec(selectedCategory).catch(error => {
+//         console.log('error');
+//         console.error(error)});;
     
-})
+// })
 
 async function getWorkoutRec (selectedCategory) {
 const response = await fetch(`${exerciseList}${selectedCategory}&limit=6`);

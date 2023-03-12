@@ -35048,6 +35048,12 @@
  .ui.big.progress .bar {
    height: 3.5em;
  }
+
+ /* new class for testing */
+ .hide {
+    display: none;
+    /* to remove thingsfrom view, add class hide */
+ }
  
  /*******************************
              Progress
