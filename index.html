@@ -51,7 +51,7 @@
 
   <section>
     <p>Choose a Genre:</p>
-    <form id="genreSelection">`
+    <form>
     <!-- Music Genre Selection Options -->
     <form id="genreSelection">
       <input type="radio" id="userGenre_pop" name="genre" value="pop">
@@ -111,7 +111,7 @@
       </div>
         
         <div>
-         <button class="green ui button">Create New Workout</button>
+         <button id="create-workout" class="green ui button">Create New Workout</button>
         </div> 
     </div>
       <!-- page 2 Quiz -->
@@ -360,10 +360,12 @@
         </button>
       </div>
       <div>
-        <button class="green ui button">Return to home</button>
+        <button id="return-home-button" class="green ui button">Return to home</button>
       </div>
 
       <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.5.0/dist/semantic.min.js"></script>
+         <!-- Import single JS file -->
+   <script src="./Develop/script.js" ></script>
 </body>
 
 </html>
