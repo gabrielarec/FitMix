@@ -75,10 +75,32 @@ function saveWorkout(){
 
 //function to load from localstorage. Pull the array with objects, and display the one that is relevant to you
 //append new workout to the page
-function displayWorkout() {
+function displayWorkoutFromLS(workoutName) {
+    var workouts = JSON.parse(localStorage.getItem("workouts"))
 
     //pull from respective keys in LS for workout and playlist 
+    for (var i=0; i < workouts.length; i++) {
+        if (workouts[i].name === workoutName) {
+            //show workout on the page 
+            displayWorkoutFromLS(workouts[i])
+            break
+        }
+    }
+}
+
+//variables set to return to home screen as workout is being displayed
+var returnHomeButton = document.getElementById("return-home-buttons")
+
+//event listener to home button
+returnHomeButton.addEventListener('click', returnHome)
+
+//function to clear workout screen and display home screen
+function returnHome() {
+    //clear workout screen
+    clearScreen()
+
+    //display home screen again
+    homeWorkouts.classList.remove("hide")
 
 }
 
-//function to return to home screen as workout is being displayed
