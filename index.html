@@ -108,25 +108,61 @@
       </div>
 
     </form>
-    <!-- Workout Category Selection Options -->
-    <p>Choose a Workout Category:</p>
-    <form id="categorySelection">
-      <input type="radio" id="userCategory_abs" name="category" value="10">
-      <label for="userCategory_abs">Abs</label><br>
-      <input type="radio" id="userCategory_arms" name="category" value="8">
-      <label for="userCategory_arms">Arms</label><br>
-      <input type="radio" id="userCategory_back" name="category" value="12">
-      <label for="userCategory_back">Back</label><br>
-      <input type="radio" id="userCategory_calves" name="category" value="14">
-      <label for="userCategory_calves">Calves</label><br>
-      <input type="radio" id="userCategory_cardio" name="category" value="15">
-      <label for="userCategory_cardio">Cardio</label><br>
-      <input type="radio" id="userCategory_chest" name="category" value="11">
-      <label for="userCategory_abs">Chest</label><br>
-      <input type="radio" id="userCategory_legs" name="category" value="9">
-      <label for="userCategory_legs">Legs</label><br>
-      <input type="radio" id="userCategory_shoulders" name="category" value="13">
-      <label for="userCategory_shoulders">Shoulders</label><br>
+    <!-- Workout Category Selector -->
+    <form id="categorySelection" class="ui form">
+      <div class="field">Chose Workout Category:</div>
+       <!-- Abs Category Selector -->
+    <div class="field">
+        <div class="ui toggle checkbox">
+      <input type="radio" class="hidden" readonly="" tabindex="0" id="userCategory_abs" name="category" value="10">
+      <label for="userCategory_abs">Abs</label>
+      </div>
+    </div>
+   <!-- Arms Category Selector -->
+   <div class="field">
+    <div class="ui toggle checkbox">
+      <input type="radio" class="hidden" readonly="" tabindex="0" id="userCategory_arms" name="category" value="8">
+      <label for="userCategory_arms">Arms</label>
+    </div>
+   </div> 
+      <!-- Back Category Selector -->
+      <div class="field">
+        <div class="ui toggle checkbox">
+      <input type="radio" class="hidden" readonly="" tabindex="0" id="userCategory_back" name="category" value="12">
+      <label for="userCategory_back">Back</label>
+    </div>
+  </div> 
+
+  <div class="field">
+    <div class="ui toggle checkbox">
+      <input type="radio" class="hidden" readonly="" tabindex="0" id="userCategory_calves" name="category" value="14">
+      <label for="userCategory_calves">Calves</label>
+    </div>
+  </div> 
+  <div class="field">
+    <div class="ui toggle checkbox">
+      <input type="radio" class="hidden" readonly="" tabindex="0" id="userCategory_cardio" name="category" value="15">
+      <label for="userCategory_cardio">Cardio</label>
+    </div>
+  </div> 
+  <div class="field">
+    <div class="ui toggle checkbox">
+      <input type="radio" class="hidden" readonly="" tabindex="0" id="userCategory_chest" name="category" value="11">
+      <label for="userCategory_abs">Chest</label>
+    </div>
+  </div> 
+  <div class="field">
+    <div class="ui toggle checkbox">
+      <input type="radio" class="hidden" readonly="" tabindex="0" id="userCategory_legs" name="category" value="9">
+      <label for="userCategory_legs">Legs</label>
+    </div>
+  </div> 
+  <div class="field">
+    <div class="ui toggle checkbox">
+      <input type="radio" class="hidden" readonly="" tabindex="0" id="userCategory_shoulders" name="category" value="13">
+      <label for="userCategory_shoulders">Shoulders</label>
+    </div>
+  </div> 
     </form>
     <button id="create-workout" class="positive ui button">Select Category</button>
 
