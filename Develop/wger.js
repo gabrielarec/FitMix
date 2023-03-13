@@ -22,44 +22,44 @@ const exerciseList = 'https://wger.de/api/v2/exercise/?language=2&category='
 //     console.log("button clicked")
 //     console.log(selectedCategory)
 
-    
+
 
 //     getWorkoutRec(selectedCategory).catch(error => {
 //         console.log('error');
 //         console.error(error)});;
-    
+
 // })
 
-async function getWorkoutRec (selectedCategory) {
-const response = await fetch(`${exerciseList}${selectedCategory}&limit=6`);
-const data = await response.json();
+async function getWorkoutRec(selectedCategory) {
+    const response = await fetch(`${exerciseList}${selectedCategory}&limit=6`);
+    const data = await response.json();
 
 
-let cleanTextDesc0 = data.results[0].description.replace(/<\/?[^>]+(>|$)/g, "");
-console.log(cleanTextDesc0);
-let cleanTextDesc1 = data.results[1].description.replace(/<\/?[^>]+(>|$)/g, "");
-console.log(cleanTextDesc1);
-let cleanTextDesc2 = data.results[2].description.replace(/<\/?[^>]+(>|$)/g, "");
-console.log(cleanTextDesc2);
-let cleanTextDesc3 = data.results[3].description.replace(/<\/?[^>]+(>|$)/g, "");
-console.log(cleanTextDesc3);
-let cleanTextDesc4 = data.results[4].description.replace(/<\/?[^>]+(>|$)/g, "");
-console.log(cleanTextDesc4);
-let cleanTextDesc5 = data.results[5].description.replace(/<\/?[^>]+(>|$)/g, "");
-console.log(cleanTextDesc5);
+    let cleanTextDesc0 = data.results[0].description.replace(/<\/?[^>]+(>|$)/g, "");
+    console.log(cleanTextDesc0);
+    let cleanTextDesc1 = data.results[1].description.replace(/<\/?[^>]+(>|$)/g, "");
+    console.log(cleanTextDesc1);
+    let cleanTextDesc2 = data.results[2].description.replace(/<\/?[^>]+(>|$)/g, "");
+    console.log(cleanTextDesc2);
+    let cleanTextDesc3 = data.results[3].description.replace(/<\/?[^>]+(>|$)/g, "");
+    console.log(cleanTextDesc3);
+    let cleanTextDesc4 = data.results[4].description.replace(/<\/?[^>]+(>|$)/g, "");
+    console.log(cleanTextDesc4);
+    let cleanTextDesc5 = data.results[5].description.replace(/<\/?[^>]+(>|$)/g, "");
+    console.log(cleanTextDesc5);
 
 
-workoutName0.append(data.results[0].name);
-workoutDesc0.append(cleanTextDesc0);
-workoutName1.append(data.results[1].name);
-workoutDesc1.append(cleanTextDesc1);
-workoutName2.append(data.results[2].name);
-workoutDesc2.append(cleanTextDesc2);
-workoutName3.append(data.results[3].name);
-workoutDesc3.append(cleanTextDesc3);
-workoutName4.append(data.results[4].name);
-workoutDesc4.append(cleanTextDesc4);
-workoutName5.append(data.results[5].name);
-workoutDesc5.append(cleanTextDesc5);
+    workoutName0.append(data.results[0].name);
+    workoutDesc0.append(cleanTextDesc0);
+    workoutName1.append(data.results[1].name);
+    workoutDesc1.append(cleanTextDesc1);
+    workoutName2.append(data.results[2].name);
+    workoutDesc2.append(cleanTextDesc2);
+    workoutName3.append(data.results[3].name);
+    workoutDesc3.append(cleanTextDesc3);
+    workoutName4.append(data.results[4].name);
+    workoutDesc4.append(cleanTextDesc4);
+    workoutName5.append(data.results[5].name);
+    workoutDesc5.append(cleanTextDesc5);
 
 }

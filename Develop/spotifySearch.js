@@ -49,26 +49,6 @@ const submitBtn = document.getElementById("submitBtn");
 const genreSelection = document.querySelectorAll('input[name="genre"]');
 const tempoSelection = document.querySelectorAll('input[name="tempo"]');
 
-// when user clicks submit button, get the values of their options
-// submitBtn.addEventListener("click", (event) => {
-//     event.preventDefault();
-//     let selectedGenre;
-//     console.log("button clicked")
-//     for (const radioButton of genreSelection) {
-//         if (radioButton.checked) {
-//             selectedGenre = radioButton.value;
-//             console.log(selectedGenre);
-//         }
-//     }
-//     for (const radioButton of tempoSelection) {
-//         if (radioButton.checked) {
-//             selectedTempo = radioButton.value;
-//             console.log(selectedTempo);
-//         }
-//     }
-//     getRecommendations(selectedGenre, selectedTempo);
-// })
-
 
 // fetch the user options when they click the submit button
 function getRecommendations(selectedGenre, selectedTempo) {
@@ -80,7 +60,7 @@ function getRecommendations(selectedGenre, selectedTempo) {
         headers: myHeaders,
         redirect: 'follow'
     };
-    fetch(`https://api.spotify.com/v1/recommendations?seed_genres=${selectedGenre}&target_danceability=${selectedTempo}&limit=5`, requestOptions)
+    fetch(`https://api.spotify.com/v1/recommendations?seed_artists=${selectedGenre}&target_danceability=${selectedTempo}&limit=5`, requestOptions)
         .then(response => response.text())
         .then(result => displayResults(result))
         .catch(error => console.log('error', error));
@@ -96,7 +76,7 @@ function displayResults(result) {
     console.log(resultsObj.tracks.length);
     for (i = 0; i < resultsObj.tracks.length; i++) {
         let spotifyID = resultsObj.tracks[i].id
-        var songItem = `<iframe src="https://open.spotify.com/embed/track/` + spotifyID + `?utm_source=oembed" frameBorder="0" width="300px" height="80px" allow="encrypted-media"></iframe><br />`
+        var songItem = `<iframe src="https://open.spotify.com/embed/track/` + spotifyID + `?utm_source=oembed" frameBorder="0" width="100%" height="100px" allow="encrypted-media"></iframe><br />`
         playlistArea.insertAdjacentHTML("beforeend", songItem);
     }
 }
