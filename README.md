@@ -11,4 +11,4 @@ Live URL:
 
 Screenshots of the application are visible at the following location: 
 
-To reference the source code, please see the link to our GitHub repository: https://github.com/gabrielarec/FitMix 
+To reference the source code, please see the link to our GitHub repository: https://github.com/gabrielarec/FitMix
