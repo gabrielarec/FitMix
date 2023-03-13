@@ -4,12 +4,11 @@ var musicQuiz = document.getElementById("music-quiz")
 
 //'create new workout' quiz start button
 var createWorkout = document.getElementById("create-workout")
-createWorkout.addEventListener('click', function(){
-
-    //spotify event listener
-    event.preventDefault();
+createWorkout.addEventListener('click', function () {
     let selectedGenre;
-    console.log("button clicked")
+    let selectedTempo;
+    let selectedCategory;
+    //spotify event listener
     for (const radioButton of genreSelection) {
         if (radioButton.checked) {
             selectedGenre = radioButton.value;
@@ -22,30 +21,40 @@ createWorkout.addEventListener('click', function(){
             console.log(selectedTempo);
         }
     }
-    getRecommendations(selectedGenre, selectedTempo);
+    for (const radioButton of categorySelection) {
+        if (radioButton.checked) {
+            selectedCategory = radioButton.value;
+            console.log(selectedCategory);
+        }
+    }
+    // check if user has selected all 3 options
+    if (selectedGenre == undefined || selectedTempo == undefined || selectedCategory === undefined) {
+        console.log("error, quiz not finished")
+        $('.ui.basic.modal')
+            .modal('show');
+    } else {
+        // fetch playlist
+        getRecommendations(selectedGenre, selectedTempo);
+        // fetch workout 
+        getWorkoutRec(selectedCategory).catch(error => {
+            console.log('error');
+            console.error(error)
+        });
+        //change the page 
+        changePage("music-quiz", "quizResults")
+    }
 
-    //Drew's workout API event listener
-    let selectedCategory = document.querySelector('input[name="category"]:checked').value;
-    console.log("button clicked")
-    console.log(selectedCategory)
 
 
-    getWorkoutRec(selectedCategory).catch(error => {
-        console.log('error');
-        console.error(error)});;
-
-    //change the page 
-    changePage("music-quiz", "quizResults")
 })
-
 //function to save the generated playlist and workouts into a single localstorage variable
-function saveWorkoutToLS(){
+function saveWorkoutToLS() {
     const code = document.getElementById("")
 }
 
 //function to clear contents. Use parameters to select which elements to take in and then hide/show
 //call each time you have an old page and new page, pass in the string of ids for each element
-function changePage(elementToHide, elementToShow){
+function changePage(elementToHide, elementToShow) {
     document.getElementById(elementToHide).classList.add("hidden")
     document.getElementById(elementToHide).classList.add("transition")
     document.getElementById(elementToShow).classList.remove("hidden")
@@ -53,11 +62,11 @@ function changePage(elementToHide, elementToShow){
 }
 
 var startButton = document.getElementById("first-button")
-startButton.addEventListener('click', function(){
+startButton.addEventListener('click', function () {
     changePage("home-page", "music-quiz")
 })
 
-function startWorkout(e){
+function startWorkout(e) {
     e.preventDefault()
     console.log('click')
 }
@@ -69,21 +78,25 @@ console.log(startButton)
 
 //function to save displayed workout as localStorage. Save workouts in an array and each workout as an object
 //save the results of the complete button to LS
-function savetoLS(workout){
+function savetoLS(workout) {
     var workouts = JSON.parse(localStorage.getItem("workouts")) || []
     workouts.push(workout)
     localStorage.setItem("workouts", JSON.stringify(workouts))
 }
 
 saveWorkoutButton = document.getElementById("save-workout")
-//saveWorkoutButton.addEventListener('click', saveWorkout)
+saveWorkoutButton.addEventListener('click', function () {
+    $('#save-workout-modal')
+        .modal('show')
+        ;
+})
 
 //nick will write function to save playlist to LS
 
 let data = {}
 
 //function to save workout and spotify results to a single API
-function storeData(api, result){
+function storeData(api, result) {
     data[api] = JSON.parse(result)
     console.log(`storing results from ${api} array`)
 }
@@ -96,7 +109,7 @@ function displayWorkoutFromLS(workoutName) {
     var workouts = JSON.parse(localStorage.getItem("workouts"))
 
     //pull from respective keys in LS for workout and playlist 
-    for (var i=0; i < workouts.length; i++) {
+    for (var i = 0; i < workouts.length; i++) {
         if (workouts[i].name === workoutName) {
             //show workout on the page 
             displayWorkoutFromLS(workouts[i])
@@ -109,7 +122,7 @@ function displayWorkoutFromLS(workoutName) {
 var returnHomeButton = document.getElementById("return-home-button")
 
 // //event listener to home button
-returnHomeButton.addEventListener('click', function(){
+returnHomeButton.addEventListener('click', function () {
     changePage("quizResults", "home-page")
     console.log("button is clicked")
 })

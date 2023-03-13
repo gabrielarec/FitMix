@@ -1,10 +1,13 @@
 #music-quiz {
     background-image: url('./Develop/Images/music.jpeg')!important;
     background-size: cover !important;
-    opacity: 0.8;
+    opacity: 0.9;
 }
 
+<<<<<<< HEAD
+=======
 .hidden.transition {
     display: none;
     visibility: hidden;
   }
+>>>>>>> 6d145e0a1e8b7067fe38c93081365210a7baf193
