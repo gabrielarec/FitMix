@@ -34,6 +34,8 @@ Screenshots of the application are visible at the following location:
 
 ![Application-Music-Quiz](./assets/FitMix%20Music%20Quiz.png)
 
+![Application-workouts](./assets/FitMix%20exercise%20and%20playlist%20screen.png)
+
 # License # 
 MIT License
 
