@@ -6,7 +6,7 @@ const base64Auth = "OGJkN2M1NzM2OTZkNDJkNTk5ZjNlZWMxMDM5MDRkY2M6MDU4NzQ3NjlmODI4
 
 const clientID = "8bd7c573696d42d599f3eec103904dcc";
 
-
+// check for existing access token
 if (localStorage.getItem("access_token") == null || localStorage.getItem("token_date") < (Math.floor(Date.now() / 1000) - 3600)) {
     console.log("Access token expired or does not exist. Getting a new access token");
     getAccessToken();
@@ -80,23 +80,4 @@ function displayResults(result) {
     }
 }
 
-
-// get saved play lists, or create an empty array to push
-const savedPlaylists = JSON.parse(localStorage.getItem("savedPlaylists")) || [];
-// save results to an array
-function savePlaylist() {
-    console.log("Saving your playlist to localstorage");
-    let trackIDArray = [];
-    for (i = 0; i < playlistObject.tracks.length; i++) {
-        trackIDArray.push(playlistObject.tracks[i].id);
-        console.log(playlistObject.tracks[i].id)
-    }
-    console.log(trackIDArray);
-    // save the track IDs in an object called playlistEntry
-    playlistEntry = {
-        playlistName: Date.now(),
-        trackIDs: trackIDArray
-    }
-    savedPlaylists.push(playlistEntry);
-    localStorage.setItem("savedPlaylists", JSON.stringify(savedPlaylists));
-}
+// 

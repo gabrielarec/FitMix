@@ -63,34 +63,3 @@ async function getWorkoutRec(selectedCategory) {
     workoutDesc5.append(cleanTextDesc5);
 
 }
-
-// get saved play lists, or create an empty array to push
-const savedWorkouts = JSON.parse(localStorage.getItem("savedWorkouts")) || [];
-// save results to an array
-function saveWorkout() {
-    console.log("Saving your workout to localstorage");
-    let workoutNamesArray = [];
-    let workoutDescArray = [];
-    for (i = 0; i < workoutData.results.length; i++) {
-        workoutNamesArray.push(workoutData.results[i].name);
-        workoutDescArray.push(workoutData.results[i].description.replace(/<\/?[^>]+(>|$)/g, ""));
-    }
-    console.log(workoutNamesArray, workoutDescArray);
-    // save the track IDs in an object called playlistEntry
-    workoutEntry = {
-        collectionName: document.getElementById("collection-name").value,
-        workoutNames: workoutNamesArray,
-        workoutDescriptions: workoutDescArray
-    }
-    savedWorkouts.push(workoutEntry);
-    localStorage.setItem("savedWorkouts", JSON.stringify(savedWorkouts));
-}
-
-//check if workout name field has an input
-document.getElementById("collection-name").addEventListener("keydown", function () {
-    if (document.getElementById("collection-name").value === "") {
-        document.getElementById("collectionInputForm").insertAdjacentHTML("beforeend", `<div class="ui pointing red basic label"> Write your playlist name here </div>`);
-    } else {
-        document.getElementById("save-collection").classList.remove("disabled");
-    }
-})
