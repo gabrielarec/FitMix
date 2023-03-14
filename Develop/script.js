@@ -127,7 +127,12 @@ returnHomeButton.addEventListener('click', function () {
     console.log("button is clicked")
 })
 
-
+// save workout + playlist as a collection
+var saveCollectionBtn = document.getElementById("save-collection");
+saveCollectionBtn.addEventListener("click", function () {
+    savePlaylist();
+    saveWorkout();
+})
 //function to clear workout screen and display home screen
 // function returnHome() {
 //     //clear workout screen
