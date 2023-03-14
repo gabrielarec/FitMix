@@ -70,3 +70,5 @@ Our application uses several primary features:
 
 Areas where the application's functionality can be built out are: use of Semantic UI and implementation of pause and play buttons from the Spotify Music Player API. To reference this material, please feel free to see the GitHub repository above and create a pull request with your code 
 
+
+To reference the source code, please see the link to our GitHub repository: https://github.com/gabrielarec/FitMix 
