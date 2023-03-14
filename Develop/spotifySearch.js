@@ -70,13 +70,33 @@ function getRecommendations(selectedGenre, selectedTempo) {
 
 
 // spotify oEmbed frame method
+let playlistObject = "";
 function displayResults(result) {
-    var resultsObj = JSON.parse(result);
-    console.log(resultsObj);
-    console.log(resultsObj.tracks.length);
-    for (i = 0; i < resultsObj.tracks.length; i++) {
-        let spotifyID = resultsObj.tracks[i].id
+    playlistObject = JSON.parse(result);
+    for (i = 0; i < playlistObject.tracks.length; i++) {
+        let spotifyID = playlistObject.tracks[i].id
         var songItem = `<iframe src="https://open.spotify.com/embed/track/` + spotifyID + `?utm_source=oembed" frameBorder="0" width="100%" height="100px" allow="encrypted-media"></iframe><br />`
         playlistArea.insertAdjacentHTML("beforeend", songItem);
     }
+}
+
+
+// get saved play lists, or create an empty array to push
+const savedPlaylists = JSON.parse(localStorage.getItem("savedPlaylists")) || [];
+// save results to an array
+function savePlaylist() {
+    console.log("Saving your playlist to localstorage");
+    let trackIDArray = [];
+    for (i = 0; i < playlistObject.tracks.length; i++) {
+        trackIDArray.push(playlistObject.tracks[i].id);
+        console.log(playlistObject.tracks[i].id)
+    }
+    console.log(trackIDArray);
+    // save the track IDs in an object called playlistEntry
+    playlistEntry = {
+        playlistName: Date.now(),
+        trackIDs: trackIDArray
+    }
+    savedPlaylists.push(playlistEntry);
+    localStorage.setItem("savedPlaylists", JSON.stringify(savedPlaylists));
 }
