@@ -18,6 +18,8 @@
   <script src="./Develop/wger.js" defer></script>
   <!-- Semantic UI script -->
   <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.5.0/dist/semantic.min.js" defer></script>
+  <!-- Script.JS file  -->
+  <script src="./Develop/script.js" defer></script>
   <title>FitMix</title>
 
 
@@ -26,7 +28,7 @@
 <!-- <body class="ui container" style="background:rgba(122, 219, 224, 0.473);"> -->
 
 <body class="ui container"
-  style="background-image: url(./Develop/Images/pentagon.jpg); height: 400px; background-position: center; background-repeat: repeat-y; background-size: cover;">
+  style="background-image: url(./Develop/Images/pentagon.jpg); height: 400px; background-position: center; background-repeat: no-repeat; background-size: cover; background-attachment: fixed;">
   <!-- page 1 Home screen-->
   <section class="ui inverted segment" id="home-page">
     <h4 class="ui horizontal inverted divider">
@@ -186,31 +188,28 @@
 
   <!-- <img class="ui centered large image" src="./Develop/Images/music2.jpeg"> -->
   <section class="ui inverted segment hidden transition" id="quizResults">
-    <h4 class="ui horizontal inverted divider">Here are your exercises and recommended playlist!</h4>
+    <h4 class="ui horizontal inverted divider">Your FitMix Workout</h4>
     <!-- First Column of Workouts -->
     <div class="ui two column grid">
       <div class="column">
         <!-- Workout 1 -->
         <div class="ui segment">
           <img class="ui small image" src="./Develop/Images/cardio.jpeg">
-          <button class="ui black button">Exercise 1</button>
           <div class="content">
-            <span id="workoutName0"></span>
+            <h3 id="workoutName0"></h3>
             <div id="workoutDesc0"></div>
           </div>
         </div>
         <!-- Workout 2 -->
         <div class="ui segment">
-          <img class="ui top aligned small image" src="./Develop/Images/cardio.jpeg"><button
-            class="ui black button">Exercise 2</button>
-          <span id="workoutName1"></span>
+          <img class="ui top aligned small image" src="./Develop/Images/cardio.jpeg">
+          <h3 id="workoutName1"></h3>
           <div id="workoutDesc1"></div>
         </div>
         <!-- Workout 3 -->
         <div class="ui segment">
-          <img class="ui top aligned small image" src="./Develop/Images/cardio.jpeg"><button
-            class="ui black button">Exercise 3</button>
-          <span id="workoutName2"></span>
+          <img class="ui top aligned small image" src="./Develop/Images/cardio.jpeg">
+          <h3 id="workoutName2"></h3>
           <div id="workoutDesc2"></div>
         </div>
         <!-- User Playlist is Generated Here -->
@@ -220,27 +219,24 @@
       <div class="column">
         <div class="ui segment">
           <img class="ui top aligned small image" src="./Develop/Images/cardio.jpeg">
-          <button class="ui black button">Exercise 4</button>
-          <span id="workoutName3"></span>
+          <h3 id="workoutName3"></h3>
           <div id="workoutDesc3"></div>
         </div>
         <!-- Workout 5 -->
         <div class="ui segment">
-          <img class="ui top aligned small image" src="./Develop/Images/cardio.jpeg"><button
-            class="ui black button">Exercise 5</button>
-          <span id="workoutName4"></span>
+          <img class="ui top aligned small image" src="./Develop/Images/cardio.jpeg">
+          <h3 id="workoutName4"></h3>
           <div id="workoutDesc4"></div>
         </div>
         <!-- Workout 6 -->
         <div class="ui segment">
-          <img class="ui top aligned small image" src="./Develop/Images/cardio.jpeg"><button
-            class="ui black button">Exercise 6</button>
-          <span id="workoutName5"></span>
+          <img class="ui top aligned small image" src="./Develop/Images/cardio.jpeg">
+          <h3 id="workoutName5"></h3>
           <div id="workoutDesc5"></div>
         </div>
       </div>
-      <section class="ui container">
-        <div id="musicDisplay"></div>
+      <section class="ui inverted segment container">
+        <div class="ui inverted segment container" id="musicDisplay"></div>
       </section>
       <!-- Save workout options -->
       <div class="ui grid centered container">
@@ -254,7 +250,7 @@
 
   <!-- page 4 naming playlist-->
   <section class="ui modal" id="save-workout-modal">
-    <img class="ui centered large image" src="./Develop/Images/img4.jpeg">
+    <img class="ui centered medium image" src="./Develop/Images/img4.jpeg">
 
     <h3 style="color:rgb(85, 175, 187);">Please name your playlist bellow:</h3>
     <form class="ui fluid form">
@@ -274,8 +270,5 @@
   </section>
 
 </body>
-
-<!-- Script.JS file  -->
-<script src="./Develop/script.js"></script>
 
 </html>

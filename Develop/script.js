@@ -64,6 +64,8 @@ function startWorkout(e) {
     e.preventDefault()
     console.log('click')
 }
+
+
 // set home page saved workouts div as variable
 const savedWorkoutArea = document.getElementById("userSavedWorkouts")
 //function to load from localstorage. Pull the array with objects, and display the one that is relevant to you
@@ -71,13 +73,13 @@ const savedWorkoutArea = document.getElementById("userSavedWorkouts")
 function displayWorkoutFromLS() {
     var savedWorkouts = JSON.parse(localStorage.getItem("savedCollections"));
     if (savedWorkouts == null) {
-        savedWorkoutArea.insertAdjacentHTML("beforeend", `<div class="ui segment"><h4>Welcome! Click "Create New Workout" to get started!</h4></div>`)
+        savedWorkoutArea.insertAdjacentHTML("beforeend", `<div class="ui segment">      <img class="ui centered medium image" style="border-radius:10px;" src="Develop/Images/fitmix.jpg"><h4>Welcome! Click "Create New Workout" to get started!</h4></div>`)
 
     } else {
         //pull from respective keys in LS for workout and playlist 
         savedWorkoutArea.insertAdjacentHTML("beforeend", `<h2>Saved Workouts</h2>`)
         for (var i = 0; i < savedWorkouts.length; i++) {
-            savedWorkoutArea.insertAdjacentHTML("beforeend", `<div class="ui segment"><img class="ui top centered medium circular image" src="./Develop/Images/img9.jpeg"><h4>${savedWorkouts[i].playlistName}</h4></div>`)
+            savedWorkoutArea.insertAdjacentHTML("beforeend", `<div class="ui segment" onClick='getWorkoutRec("${savedWorkouts[i].workoutQuery}"); getRecommendations("${savedWorkouts[i].genreQuery}", "${savedWorkouts[i].tempoQuery}"); changePage("home-page", "quizResults");'><img class="ui top centered medium circular image" src="./Develop/Images/img9.jpeg"><h4>${savedWorkouts[i].playlistName}</h4></div>`)
         }
     }
 }
@@ -87,8 +89,7 @@ var returnHomeButton = document.getElementById("return-home-button")
 
 // //event listener to home button
 returnHomeButton.addEventListener('click', function () {
-    changePage("quizResults", "home-page")
-    console.log("button is clicked")
+    window.location.reload();
 })
 
 // Event listener for "save workout" button
