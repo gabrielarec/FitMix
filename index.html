@@ -219,9 +219,6 @@
           <div id="workoutDesc2"></div>
         </div>
         <!-- User Playlist is Generated Here -->
-        <section class="ui segment">
-          <div id="musicDisplay"></div>
-        </section>
       </div>
       <!-- Second Column of Workouts -->
       <!-- Workout 4 -->
@@ -247,7 +244,9 @@
           <div id="workoutDesc5"></div>
         </div>
       </div>
-
+      <section class="ui container">
+        <div id="musicDisplay"></div>
+      </section>
       <!-- Save workout options -->
       <div class="ui grid centered container">
         <div class="ui buttons">
@@ -264,15 +263,14 @@
 
     <h3 style="color:rgb(85, 175, 187);">Please name your playlist bellow:</h3>
     <form class="ui fluid form">
-      <div class="field">
-        <input type="text" placeholder="playlist name">
-        <div class="ui pointing black basic label"> Write your playlist name here </div>
+      <div class="field" id="collectionInputForm">
+        <input type="text" placeholder="playlist name" id="collection-name">
       </div>
       <div class="actions">
         <div class="ui red deny button">
           Cancel
         </div>
-        <div class="ui positive right labeled icon button">
+        <div class="ui positive right labeled icon disabled button" id="save-collection">
           Save
           <i class="checkmark icon"></i>
         </div>
